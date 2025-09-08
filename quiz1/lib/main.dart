@@ -22,9 +22,10 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Bienvenido a PartyFinder'),
         titleTextStyle: TextStyle(
-          color: const Color.fromARGB(255, 255, 255, 255),
+          color: Colors.white,
           fontSize: 25,
         ),
+        
         backgroundColor: const Color.fromARGB(255, 117, 0, 252),
       ),
       drawer: Drawer(
@@ -38,7 +39,7 @@ class HomePage extends StatelessWidget {
               child: Text(
                 'Menú',
                 style: TextStyle(
-                  color: const Color.fromARGB(255, 255, 255, 255),
+                  color: Colors.white,
                   fontSize: 24,
                 ),
               ),
@@ -81,12 +82,23 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: Center(
-        child: Text(
-          'Selecciona una opción del menú.',
-          style: TextStyle(fontSize: 25),
-        ),
+      body: Container(decoration: const BoxDecoration(
+      image: DecorationImage(
+        image: AssetImage('assets/fondo.jpg'), // tu imagen
+        fit: BoxFit.cover, // ajusta la imagen a la pantalla
       ),
+      ),
+      child: ListView(
+        padding: const EdgeInsets.all(16.0),
+        children: const [
+          Image(image: AssetImage('assets/Disco1.jpg')),
+          SizedBox(height: 20),
+          Image(image: AssetImage('assets/Disco2.png')),
+          SizedBox(height: 20),
+          Image(image: AssetImage('assets/Disco3.jpg')),
+        ],
+      ),
+    ),
     );
   }
 }
