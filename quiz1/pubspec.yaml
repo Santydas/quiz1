@@ -62,6 +62,8 @@ flutter:
     - assets/Disco2.png
     - assets/Disco3.jpg
     - assets/fondo.jpg
+    - assets/Disco4.jpeg
+    - assets/Disco5.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
